@@ -14,8 +14,9 @@ data <- dplyr::mutate(data,
                                  ifelse(age > 18 & age <= 40, "19-40",
                                         ifelse(age > 40 & age <= 60, "41-60",
                                                ifelse(age>60 & age < 75, "60-75",
-                                                      "75 and over"))
-                                              )
+                                                      "75 and over")
+                                               )
+                                        )
                                  ),
               at_war = ifelse(of_your_life_the_us_has_been_at_war > 1, 1, of_your_life_the_us_has_been_at_war),
               at_peace = ifelse(1-at_war <= offset, offset, 1-at_war))
