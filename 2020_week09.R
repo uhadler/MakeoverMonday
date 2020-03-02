@@ -11,7 +11,7 @@ size = 9
 ggplot(week9mm) + theme_minimal() +
   geom_segment(aes(x=grade, xend = grade,
                    y=hours_averaged, yend = hours_needed),
-               colour = "#D55E00", size = size-4) + 
+               colour = "#D55E00", size = size-6) + 
   #point outlines
   geom_point(aes(x=grade, y=hours_needed), size = size+2,
              colour = "#009E73") +
